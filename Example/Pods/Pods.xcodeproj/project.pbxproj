@@ -10,9 +10,10 @@
 		320BBB1E13B1BB0D7B08A7BE1A35503E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		5D94284D6C2A95BCF8607708F33E166A /* Pods-FormTableView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C016E28DDC99B3D6D55C01EFC0CBAA24 /* Pods-FormTableView_Example-dummy.m */; };
 		811A9DBAE98B741E082E5A9B4E719E89 /* Pods-FormTableView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 112235E698E7820E5B339E560F4B7252 /* Pods-FormTableView_Tests-dummy.m */; };
+		94EEBACC2179528E006C8450 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEBACA2179528E006C8450 /* FormView.swift */; };
+		94EEBACD2179528E006C8450 /* FormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EEBACB2179528E006C8450 /* FormView.xib */; };
 		CE400046C214FA2050A08F9B6374AC9E /* Pods-FormTableView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E503A246861E5155219EDB02217FB09 /* Pods-FormTableView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D11586488EB78B79E58F730EAACEBD60 /* FormTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33274EA3D17C633962F16FF342CD335A /* FormTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D404543B711A1989FD84D9CC6960EAA6 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B161FF312112C69E72754718FF1F892 /* ReplaceMe.swift */; };
 		DEBD43AACD25DA8FAC38C33C12A1808E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		EACAFFAE0E2F808E4D054D24475CEF30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		ED2A898EC71401D032DA3C41268F1112 /* Pods-FormTableView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49674923CD034BCD1E83C71062E34726 /* Pods-FormTableView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,7 +45,6 @@
 		1B1EFF08811498EA8AEBB1B12B509C03 /* FormTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33274EA3D17C633962F16FF342CD335A /* FormTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FormTableView-umbrella.h"; sourceTree = "<group>"; };
 		387FB2EAD12FAC1492EAAF2BFE4C4A62 /* Pods-FormTableView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3B161FF312112C69E72754718FF1F892 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = FormTableView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		3C30645483B3D88E4E0002E9D17B37B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		49674923CD034BCD1E83C71062E34726 /* Pods-FormTableView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FormTableView_Example-umbrella.h"; sourceTree = "<group>"; };
 		569F2259EB5B7D8414BE3DF049797E76 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		9235BC9FA4B5A0DDDFEA23F09F4DF163 /* Pods-FormTableView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9420C3E51933CD24ED02A9AA32D9B7E1 /* Pods-FormTableView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		94EEBACA2179528E006C8450 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = FormTableView/Classes/FormView.swift; sourceTree = "<group>"; };
+		94EEBACB2179528E006C8450 /* FormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FormView.xib; path = FormTableView/Classes/FormView.xib; sourceTree = "<group>"; };
 		969A766E0CB56B31D1EFB067CB3FCE10 /* FormTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FormTableView.xcconfig; sourceTree = "<group>"; };
 		995CC6025D90B3DD6109391F004027F3 /* Pods-FormTableView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-resources.sh"; sourceTree = "<group>"; };
 		A513EA81EEBB83B93A0A218984718632 /* FormTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = FormTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -200,7 +202,8 @@
 		D79E1C5952870BD63AF0F17C457F0BFB /* FormTableView */ = {
 			isa = PBXGroup;
 			children = (
-				3B161FF312112C69E72754718FF1F892 /* ReplaceMe.swift */,
+				94EEBACA2179528E006C8450 /* FormView.swift */,
+				94EEBACB2179528E006C8450 /* FormView.xib */,
 				36095BA723F19F39AF6F245BFA751399 /* Pod */,
 				A0B0415184D91777DECDC694A07A248E /* Support Files */,
 			);
@@ -360,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EEBACD2179528E006C8450 /* FormView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,8 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EEBACC2179528E006C8450 /* FormView.swift in Sources */,
 				FDE8E365C11E9F3BCAD86E49FAE7FC2B /* FormTableView-dummy.m in Sources */,
-				D404543B711A1989FD84D9CC6960EAA6 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
