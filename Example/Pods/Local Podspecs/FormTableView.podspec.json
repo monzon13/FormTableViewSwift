@@ -1,0 +1,22 @@
+{
+  "name": "FormTableView",
+  "version": "0.1.0",
+  "summary": "A short description of FormTableView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jmhdevep/FormTableView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jmhdevep": "jmherrero@jmhdeveloper.com"
+  },
+  "source": {
+    "git": "https://github.com/jmhdevep/FormTableView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FormTableView/Classes/**/*"
+}

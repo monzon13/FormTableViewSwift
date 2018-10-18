@@ -1,0 +1,6 @@
+framework module Pods_FormTableView_Tests {
+  umbrella header "Pods-FormTableView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

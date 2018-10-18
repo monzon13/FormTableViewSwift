@@ -1,0 +1,16 @@
+PODS:
+  - FormTableView (0.1.0)
+
+DEPENDENCIES:
+  - FormTableView (from `../`)
+
+EXTERNAL SOURCES:
+  FormTableView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FormTableView: bcd7ee84a10e15bbc0edef4a28abf4560bad8766
+
+PODFILE CHECKSUM: cb986a256de688f4c28b0dfd35bf27dfe106eaa0
+
+COCOAPODS: 1.5.3
