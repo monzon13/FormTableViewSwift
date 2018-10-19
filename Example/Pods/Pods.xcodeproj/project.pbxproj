@@ -59,8 +59,8 @@
 		9235BC9FA4B5A0DDDFEA23F09F4DF163 /* Pods-FormTableView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9420C3E51933CD24ED02A9AA32D9B7E1 /* Pods-FormTableView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		94EEBACA2179528E006C8450 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = FormTableView/Classes/FormView.swift; sourceTree = "<group>"; };
-		94EEBACB2179528E006C8450 /* FormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FormView.xib; path = FormTableView/Classes/FormView.xib; sourceTree = "<group>"; };
+		94EEBACA2179528E006C8450 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = FormTableView/Classes/view/FormView.swift; sourceTree = "<group>"; };
+		94EEBACB2179528E006C8450 /* FormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FormView.xib; path = FormTableView/Classes/view/FormView.xib; sourceTree = "<group>"; };
 		969A766E0CB56B31D1EFB067CB3FCE10 /* FormTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FormTableView.xcconfig; sourceTree = "<group>"; };
 		995CC6025D90B3DD6109391F004027F3 /* Pods-FormTableView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-resources.sh"; sourceTree = "<group>"; };
 		A513EA81EEBB83B93A0A218984718632 /* FormTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = FormTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -177,6 +177,15 @@
 			path = "Target Support Files/Pods-FormTableView_Example";
 			sourceTree = "<group>";
 		};
+		94FDE313217A4E7E002CD2CD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				94EEBACA2179528E006C8450 /* FormView.swift */,
+				94EEBACB2179528E006C8450 /* FormView.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		A0B0415184D91777DECDC694A07A248E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,8 +211,7 @@
 		D79E1C5952870BD63AF0F17C457F0BFB /* FormTableView */ = {
 			isa = PBXGroup;
 			children = (
-				94EEBACA2179528E006C8450 /* FormView.swift */,
-				94EEBACB2179528E006C8450 /* FormView.xib */,
+				94FDE313217A4E7E002CD2CD /* view */,
 				36095BA723F19F39AF6F245BFA751399 /* Pod */,
 				A0B0415184D91777DECDC694A07A248E /* Support Files */,
 			);

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     func configureTable() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.estimatedRowHeight = 100
+        self.tableView.estimatedRowHeight = CustomTableViewCell.estimateheigth
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView()
         
