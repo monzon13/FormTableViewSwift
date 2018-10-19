@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.swift_version = '4.0'
 
-  s.source_files = 'FormTableView/Classes/*.{swift,xib}'
+  s.source_files = 'FormTableView/Classes/**/*.{swift,xib}'
   
   # s.resource_bundles = {
   #   'FormTableView' => ['FormTableView/Assets/*.png']
