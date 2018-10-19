@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.tableFooterView = UIView()
         
        tableView.register(UINib(nibName: CustomTableViewCell.ID, bundle: nil),
                           forCellReuseIdentifier: CustomTableViewCell.ID)
