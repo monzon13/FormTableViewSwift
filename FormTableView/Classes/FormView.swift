@@ -52,6 +52,10 @@ public class FormView: UIView {
         self.layoutSubviews()
     }
     
+    public func configure(title: String) {
+        self.labelTitle.text = title
+    }
+
     //Form View
     @IBInspectable var viewColor: UIColor! {
         didSet {
