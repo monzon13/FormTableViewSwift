@@ -1,48 +1,30 @@
 //
 //  FormView.swift
-//  
+//  FormTableView
 //
-//  Created by José Miguel Herrero on 18/10/2018.
-//  Copyright © 2018 José Miguel Herrero. All rights reserved.
+//  Created by jmhdevep on 10/19/2018.
+//  Copyright (c) 2018 jmhdevep. All rights reserved.
 //
 
 import UIKit
 
+// - View Class -
 @IBDesignable
 public class FormView: UIView {
-    // Our custom view from the XIB file
+
+    //MARK: IBOutlets
     var view: UIView!
-    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelSubtitle: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var viewLine: UIView!
     @IBOutlet weak var labelError: UILabel!
     
-    func xibSetup() {
-        view = loadViewFromNib()
-        
-        // use bounds not frame or it'll be offset
-        view.frame = bounds
-        
-        // Make the view stretch with containing view
-        view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
-        // Adding custom subview on top of our view (over any custom drawing > see note below)
-        addSubview(view)
-    }
+    var form: Form?
     
-    func loadViewFromNib() -> UIView {
-        
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "FormView", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        
-        return view
-    }
-    
+    //MARK: - Lifecycle methods
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         xibSetup()
     }
     
@@ -52,18 +34,32 @@ public class FormView: UIView {
         self.layoutSubviews()
     }
     
-    public func configure(title: String) {
-        self.labelTitle.text = title
+    
+    override public var description : String {
+        return "It's a view that simplify the configuration of a form and can be easily configure on the attributes inspector."
     }
-
-    //Form View
-    @IBInspectable var viewColor: UIColor! {
+    
+    //MARK: Public methods
+    
+    /// Used to set the parameters.
+    ///
+    /// - Parameter form: Model of the information that it's going to be display.
+    public func configure(form: Form) {
+        self.form = form
+        configureLabels()
+    }
+    
+    //MARK: Form view properties
+    ///To change background color of the view
+    @IBInspectable
+    var viewColor: UIColor! {
         didSet {
             self.view.backgroundColor = viewColor
         }
     }
     
-    //TITLE
+    //MARK: Title properties
+    ///To set the text of the title
     @IBInspectable
     var titleText: String! {
         didSet {
@@ -71,6 +67,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To change the text color of the title
     @IBInspectable
     var titleColor: UIColor! {
         didSet {
@@ -78,7 +75,7 @@ public class FormView: UIView {
         }
     }
     
-    
+    ///To set the font size of the title
     fileprivate var _fontSize:CGFloat = 18
     @IBInspectable
     var titleSize:CGFloat {
@@ -91,6 +88,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the font name of the title
     fileprivate var _fontName:String = "Helvetica"
     @IBInspectable
     var titleFont: String {
@@ -103,7 +101,8 @@ public class FormView: UIView {
         }
     }
     
-    //SUBTITLE
+    //MARK: Subtitle properties
+    ///To set the text of the subtitle
     @IBInspectable
     var subtitleText: String! {
         didSet {
@@ -111,6 +110,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To change the text color of the subtitle
     @IBInspectable
     var subtitleColor: UIColor! {
         didSet {
@@ -118,6 +118,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the font size of the subtitle
     fileprivate var _fontSubtitleSize:CGFloat = 18
     @IBInspectable
     var subtitleSize: CGFloat {
@@ -130,6 +131,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the font name of the subtitle
     fileprivate var _fontSubtitleName:String = "Helvetica-Thin"
     @IBInspectable
     var subtitleFont: String {
@@ -142,7 +144,8 @@ public class FormView: UIView {
         }
     }
     
-    //TEXTFIELD
+    //MARK: Textfield properties
+    ///To set the text of the textField
     @IBInspectable
     var fieldText: String! {
         didSet {
@@ -150,6 +153,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To change the text color of the textField
     @IBInspectable
     var fieldColor: UIColor! {
         didSet {
@@ -157,6 +161,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the font size of the textField
     fileprivate var _fontTextleSize:CGFloat = 18
     @IBInspectable
     var fieldSize: CGFloat {
@@ -169,6 +174,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the font name of the textField
     fileprivate var _fontTextName:String = "Helvetica-Light"
     @IBInspectable
     var fieldFont: String {
@@ -181,6 +187,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the text of the placeholder
     @IBInspectable
     var placeholder: String! {
         didSet {
@@ -188,6 +195,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To change the text color of the placeholder
     @IBInspectable
     var placehColor: UIColor? {
         didSet {
@@ -196,7 +204,8 @@ public class FormView: UIView {
     }
     
     
-    //VIEWLINE
+    //MARK: ViewLine properties
+    ///To change the line color
     @IBInspectable
     var lineColor: UIColor! {
         didSet {
@@ -204,6 +213,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To hide the line
     fileprivate var _lineHidden: Bool = false
     @IBInspectable
     var lineHidden: Bool {
@@ -216,7 +226,8 @@ public class FormView: UIView {
         }
     }
     
-    //ERROR
+    //MARK: Error
+    ///To set the text of the error
     @IBInspectable
     var errorText: String! {
         didSet {
@@ -224,6 +235,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To change the text color of the error
     @IBInspectable
     var errorColor: UIColor! {
         didSet {
@@ -231,6 +243,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the font size of the error
     fileprivate var _fonterrorSize:CGFloat = 11
     @IBInspectable
     var errorSize: CGFloat {
@@ -243,6 +256,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To set the font name of the error
     fileprivate var _fontErrorName:String = "Helvetica-Light"
     @IBInspectable
     var errorFont: String {
@@ -255,6 +269,7 @@ public class FormView: UIView {
         }
     }
     
+    ///To hide the error
     fileprivate var _errorHidden: Bool = false
     @IBInspectable
     var errorHidden: Bool {
@@ -266,5 +281,47 @@ public class FormView: UIView {
             return _errorHidden
         }
     }
+}
+
+//MARK: Configure methods
+extension FormView {
+    func loadViewFromNib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "FormView", bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        
+        return view
+    }
+    
+    func xibSetup() {
+        configureView()
+    }
+    
+    func configureView() {
+        view = loadViewFromNib()
+        view.frame = bounds
+        view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
+        addSubview(view)
+    }
+    
+    func configureLabels() {
+        self.labelTitle.text = form?.title
+        self.labelSubtitle.text = form?.subtitle
+        self.labelError.text = form?.error
+    }
+    
+    func configureTextField() {
+        self.textField.delegate = self
+        
+        if let value = form?.value as? String {
+            self.textField.text = value
+        }
+        self.textField.placeholder = form?.placeholder
+    }
+}
+
+//MARK: UITextFieldDelegate
+extension FormView: UITextFieldDelegate {
+    
 }
 

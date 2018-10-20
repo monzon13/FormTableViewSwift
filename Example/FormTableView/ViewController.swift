@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FormTableView
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureTable()
     }
+    
     
     func configureTable() {
         self.tableView.delegate = self
@@ -27,8 +29,6 @@ class ViewController: UIViewController {
        tableView.register(UINib(nibName: CustomTableViewCell.ID, bundle: nil),
                           forCellReuseIdentifier: CustomTableViewCell.ID)
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -38,8 +38,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.ID, for: indexPath) as! CustomTableViewCell
-       
-        
+    
         return cell
     }
     

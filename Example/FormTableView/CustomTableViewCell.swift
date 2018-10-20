@@ -2,8 +2,8 @@
 //  CustomTableViewCell.swift
 //  FormTableView_Example
 //
-//  Created by José Miguel on 19/10/2018.
-//  Copyright © 2018 CocoaPods. All rights reserved.
+//  Created by jmhdevep on 10/19/2018.
+//  Copyright (c) 2018 jmhdevep. All rights reserved.
 //
 
 import UIKit
@@ -19,6 +19,7 @@ class CustomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
+        
     }
 
     
