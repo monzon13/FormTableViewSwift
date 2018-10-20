@@ -29,15 +29,25 @@ class ViewController: UIViewController {
        tableView.register(UINib(nibName: CustomTableViewCell.ID, bundle: nil),
                           forCellReuseIdentifier: CustomTableViewCell.ID)
     }
+    
+    func forms() -> [Form] {
+        return [Form.init(type: .none, id: 0, title: "Name"),
+                Form.init(type: .none, id: 1, title: "Surname"),
+                Form.init(type: .email, id: 2, title: "Email", placeholder: "example@example.com", regEx: "", error: "Invalid format"),
+                Form.init(type: .password, id: 3, title: "Password", placeholder: "", regEx: "", error: ""),
+                Form.init(type: .url, id: 4, title: "Web", placeholder: "www.example.com")]
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return forms().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.ID, for: indexPath) as! CustomTableViewCell
+        
+        cell.formView.configure(form: forms()[indexPath.row])
     
         return cell
     }

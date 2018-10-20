@@ -2,15 +2,15 @@ PODS:
   - FormTableView (0.1.0)
 
 DEPENDENCIES:
-  - FormTableView (from `../`)
+  - FormTableView (from `/Users/jmh/FormTableView`)
 
 EXTERNAL SOURCES:
   FormTableView:
-    :path: "../"
+    :path: /Users/jmh/FormTableView
 
 SPEC CHECKSUMS:
-  FormTableView: bcd7ee84a10e15bbc0edef4a28abf4560bad8766
+  FormTableView: 0c45cfb12494b96ae421ae2a893e897e83dc9577
 
-PODFILE CHECKSUM: cb986a256de688f4c28b0dfd35bf27dfe106eaa0
+PODFILE CHECKSUM: 43cdb914b45f25f527e087c57973cfd043406b15
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.4.0

@@ -46,7 +46,10 @@ public class FormView: UIView {
     /// - Parameter form: Model of the information that it's going to be display.
     public func configure(form: Form) {
         self.form = form
+        clean()
         configureLabels()
+        configureTextField()
+        configureKeyboard()
     }
     
     //MARK: Form view properties
@@ -304,6 +307,14 @@ extension FormView {
         addSubview(view)
     }
     
+    func clean() {
+        self.labelTitle.text = ""
+        self.labelSubtitle.text = ""
+        self.textField.text = ""
+        self.textField.placeholder = ""
+        self.labelError.text = ""
+    }
+    
     func configureLabels() {
         self.labelTitle.text = form?.title
         self.labelSubtitle.text = form?.subtitle
@@ -318,10 +329,45 @@ extension FormView {
         }
         self.textField.placeholder = form?.placeholder
     }
+    
+    func configureKeyboard() {
+        guard let type = form?.type else {
+            return
+        }
+        
+        switch type {
+        case .none, .picker, .date, .address:
+            self.textField.keyboardType = .default
+            
+        case .number, .phone:
+            self.textField.keyboardType = .numberPad
+            
+        case .email:
+            self.textField.keyboardType = .emailAddress
+            
+        case .password:
+            self.textField.keyboardType = .default
+            self.textField.isSecureTextEntry = true
+            
+        case .url:
+            self.textField.keyboardType = .URL
+            
+            
+        }
+    }
 }
 
 //MARK: UITextFieldDelegate
 extension FormView: UITextFieldDelegate {
-    
+//    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        guard let texFieldText = textField.text else {
+//            return true
+//        }
+//        let text: String = texFieldText + string
+//        
+//        self.labelError.isHidden = text.isValid(form: self.form)
+//        
+//        return true
+//    }
 }
 

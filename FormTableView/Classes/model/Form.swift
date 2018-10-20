@@ -18,6 +18,7 @@ public enum Type {
     case picker
     case date
     case phone
+    case url
 }
 
 /// Model of the information that it's going to be display.

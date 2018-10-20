@@ -1,9 +1,9 @@
 {
   "name": "FormTableView",
   "version": "0.1.0",
-  "summary": "A short description of FormTableView.",
+  "summary": "Easy way to create dinamic forms",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/jmhdevep/FormTableView",
+  "homepage": "https://github.com/jmhdevelop/FormTableView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "jmhdevep": "jmherrero@jmhdeveloper.com"
   },
   "source": {
-    "git": "https://github.com/jmhdevep/FormTableView.git",
+    "git": "https://github.com/jmhdevelop/FormTableView.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "FormTableView/Classes/**/*"
+  "swift_version": "4.0",
+  "source_files": "FormTableView/Classes/**/*.{swift,xib}"
 }
