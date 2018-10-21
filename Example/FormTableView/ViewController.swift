@@ -33,9 +33,9 @@ class ViewController: UIViewController {
     func forms() -> [Form] {
         return [Form.init(type: .none, id: 0, title: "Name"),
                 Form.init(type: .none, id: 1, title: "Surname"),
-                Form.init(type: .email, id: 2, title: "Email", placeholder: "example@example.com", regEx: "", error: "Invalid format"),
-                Form.init(type: .password, id: 3, title: "Password", placeholder: "", regEx: "", error: ""),
-                Form.init(type: .url, id: 4, title: "Web", placeholder: "www.example.com")]
+                Form.init(type: .email, id: 2, title: "Email", placeholder: "example@example.com", error: "This e-mail address is not valid"),
+                Form.init(type: .password, id: 3, title: "Password", placeholder: "", error: ""),
+                Form.init(type: .url, id: 4, title: "Web", placeholder: "www.example.com", error: "Not a valid URL format")]
     }
 }
 

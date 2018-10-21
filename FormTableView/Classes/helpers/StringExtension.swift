@@ -23,7 +23,7 @@ extension String {
     private func configureRegEx(_ form: Form) -> String? {
         var regEx: String?
         
-        if let newRegEx = form.regEx {
+        if let newRegEx = form.regEx, !newRegEx.isEmpty {
             regEx = newRegEx
         }
         else {

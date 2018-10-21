@@ -364,11 +364,33 @@ extension FormView: UITextFieldDelegate {
         guard let texFieldText = textField.text else {
             return true
         }
-        let text: String = texFieldText + string
+        
+        var text = ""
+        var deleted = texFieldText
+        if !deleted.isEmpty {
+            deleted.removeLast()
+        }
+        
+        text = (string.isEmpty) ? deleted : (texFieldText + string)
         
         self.labelError.isHidden = text.isValid(form: self.form)
-        
+        updateTable()
+  
         return true
+    }
+    
+    func updateTable() {
+        let vc =  UIApplication.shared.delegate?.window??.rootViewController
+        if let views = vc?.view.subviews {
+            for view in views {
+                if let tableView = view as? UITableView {
+                    UIView.performWithoutAnimation {
+                        tableView.beginUpdates()
+                        tableView.endUpdates()
+                    }
+                }
+            }
+        }
     }
 }
 
