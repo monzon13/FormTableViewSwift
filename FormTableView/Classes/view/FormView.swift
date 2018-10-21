@@ -313,6 +313,7 @@ extension FormView {
         self.textField.text = ""
         self.textField.placeholder = ""
         self.labelError.text = ""
+        self.labelError.isHidden = true
     }
     
     func configureLabels() {
@@ -359,15 +360,15 @@ extension FormView {
 
 //MARK: UITextFieldDelegate
 extension FormView: UITextFieldDelegate {
-//    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        guard let texFieldText = textField.text else {
-//            return true
-//        }
-//        let text: String = texFieldText + string
-//        
-//        self.labelError.isHidden = text.isValid(form: self.form)
-//        
-//        return true
-//    }
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let texFieldText = textField.text else {
+            return true
+        }
+        let text: String = texFieldText + string
+        
+        self.labelError.isHidden = text.isValid(form: self.form)
+        
+        return true
+    }
 }
 
