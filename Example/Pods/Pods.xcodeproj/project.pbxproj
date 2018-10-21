@@ -34,28 +34,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09F693AB9D64E656DA8E8DB6F669EBF6 /* Pods_FormTableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FormTableView_Example.framework; path = "Pods-FormTableView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F693AB9D64E656DA8E8DB6F669EBF6 /* Pods_FormTableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormTableView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		112235E698E7820E5B339E560F4B7252 /* Pods-FormTableView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FormTableView_Tests-dummy.m"; sourceTree = "<group>"; };
 		128410AB8F7BBF2818852BBFC7A615C5 /* Pods-FormTableView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FormTableView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1B1EFF08811498EA8AEBB1B12B509C03 /* FormTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FormTableView.framework; path = FormTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29A56AB3F3346F28C836E94EF68BF249 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1B1EFF08811498EA8AEBB1B12B509C03 /* FormTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A56AB3F3346F28C836E94EF68BF249 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		29FC5CA5A35CF0C67F85FF0BFEE72149 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		387FB2EAD12FAC1492EAAF2BFE4C4A62 /* Pods-FormTableView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3D1BD36437F4B7F06E7DC2E3C12EC820 /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		49674923CD034BCD1E83C71062E34726 /* Pods-FormTableView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FormTableView_Example-umbrella.h"; sourceTree = "<group>"; };
 		55F987EE03711B58BF8B84BDC6F007CE /* FormTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FormTableView-prefix.pch"; sourceTree = "<group>"; };
 		5E503A246861E5155219EDB02217FB09 /* Pods-FormTableView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FormTableView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		636298C165D518C27A95B4AC0FC48724 /* FormTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = FormTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		636298C165D518C27A95B4AC0FC48724 /* FormTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = FormTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6551450C054B9D6B717750AC830B06D8 /* FormTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FormTableView-dummy.m"; sourceTree = "<group>"; };
 		65B16266602B50C05073185D080EBBF6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69AE37B01CA26F64AF82EBE963F2A3D7 /* FormTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FormTableView.modulemap; sourceTree = "<group>"; };
 		7071152BD9E34FB8F98D6C64B8C8531A /* Pods-FormTableView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Tests-resources.sh"; sourceTree = "<group>"; };
-		7E809DB90C8A5D591970CBDBB39F45F9 /* Pods_FormTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FormTableView_Tests.framework; path = "Pods-FormTableView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E809DB90C8A5D591970CBDBB39F45F9 /* Pods_FormTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormTableView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D4EB6FD6113F9AC59F9F1C9CE71648 /* Pods-FormTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FormTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8266F74070C1D1850D9CF2C874022894 /* Pods-FormTableView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FormTableView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		88FE81ABACF799429E9B8225B799DFED /* Pods-FormTableView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FormTableView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9235BC9FA4B5A0DDDFEA23F09F4DF163 /* Pods-FormTableView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9420C3E51933CD24ED02A9AA32D9B7E1 /* Pods-FormTableView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		995CC6025D90B3DD6109391F004027F3 /* Pods-FormTableView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-resources.sh"; sourceTree = "<group>"; };
 		B92D25B3B13F65EC5A43E0446E2DF964 /* Pods-FormTableView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FormTableView_Example.modulemap"; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		C016E28DDC99B3D6D55C01EFC0CBAA24 /* Pods-FormTableView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FormTableView_Example-dummy.m"; sourceTree = "<group>"; };
 		C10B229F513EE7DB7F7ACE59736E3B7C /* Pods-FormTableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FormTableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C237C0492DEC53F3299008563426B5FC /* Pods-FormTableView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C327306448384526D319C2226AA41C8C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C327306448384526D319C2226AA41C8C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C6DC913ACEA4C86B6C91BA104D4AC031 /* Pods-FormTableView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FormTableView_Tests.modulemap"; sourceTree = "<group>"; };
 		CC3BCFC336259949D857673CBC7C3E79 /* FormView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		D3E18F3757868F132352CC7F911D5CCD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -352,6 +352,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					E7C219F701DCB0D16A6BF8CE81615D88 = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -493,7 +498,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -556,8 +561,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -750,7 +754,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
