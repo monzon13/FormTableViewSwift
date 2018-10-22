@@ -22,6 +22,7 @@ public class FormView: UIView {
     @IBOutlet weak var labelError: UILabel!
     
     var field: Field?
+    var vc: UIViewController?
     
     //MARK: - Lifecycle methods
     override init(frame: CGRect) {
@@ -51,6 +52,7 @@ public class FormView: UIView {
         configureLabels()
         configureTextField()
         configureKeyboard()
+        configureAction()
     }
     
     //MARK: field view properties
@@ -291,7 +293,7 @@ public class FormView: UIView {
 extension FormView {
     func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "fieldView", bundle: bundle)
+        let nib = UINib(nibName: "FormView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
@@ -356,15 +358,26 @@ extension FormView {
             
         }
     }
+    
+    func configureAction() {
+        guard let type = field?.type else {
+            return
+        }
+        switch type {
+        case .address:
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
+            self.textField.isUserInteractionEnabled = true
+            self.textField.addGestureRecognizer(tap)
+            
+        default:
+            break
+        }
+    }
 }
 
 //MARK: Private methods
 extension FormView {
     private func updateTable() {
-        var vc: UIViewController?
-        let count: Int = UIApplication.shared.delegate?.window??.rootViewController?.children.count ?? 0
-        let root = UIApplication.shared.delegate?.window??.rootViewController
-        let last =  UIApplication.shared.delegate?.window??.rootViewController?.children.last
         vc = (count > 0) ? last : root
         
         if let views = vc?.view.subviews {
@@ -376,6 +389,15 @@ extension FormView {
                     }
                 }
             }
+        }
+    }
+    
+    @objc fileprivate func tapFunction(sender:UITapGestureRecognizer) {
+        vc = (count > 0) ? last : root
+        let bundle = Bundle(for: self.classForCoder)
+        let storyboard = UIStoryboard(name: "Search", bundle: bundle)
+        if let searchVC = storyboard.instantiateViewController(withIdentifier: SearchAddressViewController.ID) as?SearchAddressViewController  {
+            vc?.present(searchVC, animated: true, completion: nil)
         }
     }
 }

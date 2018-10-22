@@ -35,7 +35,8 @@ class ViewController: UIViewController {
                 Field.init(type: .none, id: 1, title: "Surname"),
                 Field.init(type: .email, id: 2, title: "Email", placeholder: "example@example.com", error: "This e-mail address is not valid"),
                 Field.init(type: .password, id: 3, title: "Password", placeholder: "", error: ""),
-                Field.init(type: .url, id: 4, title: "Web", placeholder: "www.example.com", error: "Not a valid URL format")]
+                Field.init(type: .address, id: 4, title: "Address", placeholder: "", error: ""),
+                Field.init(type: .url, id: 5, title: "Web", placeholder: "www.example.com", error: "Not a valid URL format")]
     }
 }
 
