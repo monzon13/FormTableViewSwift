@@ -54,6 +54,7 @@ class SearchAddressViewController: UIViewController {
         
 }
 
+//MARK: UISearchBarDelegate
 extension SearchAddressViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         //change searchCompleter depends on searchBar's text
@@ -67,13 +68,13 @@ extension SearchAddressViewController: UISearchBarDelegate {
     }
 }
 
+//MARK: UITableViewDelegate, UITableViewDataSource
 extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchSource?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //I've created SearchCell beforehand; it might be your cell type
         let cell: SearchAddressTableViewCell = tableView.dequeueReusableCell(withIdentifier: SearchAddressTableViewCell.ID, for: indexPath) as! SearchAddressTableViewCell
         
         cell.configure(searchSource?[indexPath.row])
@@ -91,7 +92,6 @@ extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSourc
 extension SearchAddressViewController: MKLocalSearchCompleterDelegate {
     @available(iOS 9.3, *)
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-        //get result, transform it to our needs and fill our dataSource
         self.searchSource = completer.results.map { return Address(localSearch: $0) }
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -100,7 +100,6 @@ extension SearchAddressViewController: MKLocalSearchCompleterDelegate {
     
     @available(iOS 9.3, *)
     func completer(_ completer: MKLocalSearchCompleter, didFailWithError error: Error) {
-        //handle the error
         print(error.localizedDescription)
     }
 }
