@@ -8,9 +8,9 @@
 import Foundation
 
 extension String {
-    func isValid(form: Form?) -> Bool {
-        if  let form = form,
-            let newRegEx = configureRegEx(form) {
+    func isValid(field: Field?) -> Bool {
+        if  let field = field,
+            let newRegEx = configureRegEx(field) {
             let valueTest = NSPredicate(format:"SELF MATCHES %@", newRegEx)
             
             return valueTest.evaluate(with: self)
@@ -20,14 +20,14 @@ extension String {
         }
     }
     
-    private func configureRegEx(_ form: Form) -> String? {
+    private func configureRegEx(_ field: Field) -> String? {
         var regEx: String?
         
-        if let newRegEx = form.regEx, !newRegEx.isEmpty {
+        if let newRegEx = field.regEx, !newRegEx.isEmpty {
             regEx = newRegEx
         }
         else {
-            switch form.type {
+            switch field.type {
             case .email:
                 regEx = REG_EX_EMAIL
                 

@@ -30,12 +30,12 @@ class ViewController: UIViewController {
                           forCellReuseIdentifier: CustomTableViewCell.ID)
     }
     
-    func forms() -> [Form] {
-        return [Form.init(type: .none, id: 0, title: "Name"),
-                Form.init(type: .none, id: 1, title: "Surname"),
-                Form.init(type: .email, id: 2, title: "Email", placeholder: "example@example.com", error: "This e-mail address is not valid"),
-                Form.init(type: .password, id: 3, title: "Password", placeholder: "", error: ""),
-                Form.init(type: .url, id: 4, title: "Web", placeholder: "www.example.com", error: "Not a valid URL format")]
+    func forms() -> [Field] {
+        return [Field.init(type: .none, id: 0, title: "Name"),
+                Field.init(type: .none, id: 1, title: "Surname"),
+                Field.init(type: .email, id: 2, title: "Email", placeholder: "example@example.com", error: "This e-mail address is not valid"),
+                Field.init(type: .password, id: 3, title: "Password", placeholder: "", error: ""),
+                Field.init(type: .url, id: 4, title: "Web", placeholder: "www.example.com", error: "Not a valid URL format")]
     }
 }
 
@@ -47,7 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.ID, for: indexPath) as! CustomTableViewCell
         
-        cell.formView.configure(form: forms()[indexPath.row])
+        cell.formView.configure(field: forms()[indexPath.row])
     
         return cell
     }

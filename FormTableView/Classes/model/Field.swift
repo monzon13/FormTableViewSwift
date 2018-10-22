@@ -1,5 +1,5 @@
 //
-//  Form.swift
+//  Field.swift
 //  FormTableView
 //
 //  Created by jmhdevep on 10/19/2018.
@@ -22,7 +22,7 @@ public enum Type {
 }
 
 /// Model of the information that it's going to be display.
-public class Form {
+public class Field {
     var type: Type
     var id: Int
     var title: String

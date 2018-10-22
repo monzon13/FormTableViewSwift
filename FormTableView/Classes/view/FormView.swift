@@ -17,10 +17,11 @@ public class FormView: UIView {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelSubtitle: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var imageAction: UIImageView!
     @IBOutlet weak var viewLine: UIView!
     @IBOutlet weak var labelError: UILabel!
     
-    var form: Form?
+    var field: Field?
     
     //MARK: - Lifecycle methods
     override init(frame: CGRect) {
@@ -36,23 +37,23 @@ public class FormView: UIView {
     
     
     override public var description : String {
-        return "It's a view that simplify the configuration of a form and can be easily configure on the attributes inspector."
+        return "It's a view that simplify the configuration of a field and can be easily configure on the attributes inspector."
     }
     
     //MARK: Public methods
     
     /// Used to set the parameters.
     ///
-    /// - Parameter form: Model of the information that it's going to be display.
-    public func configure(form: Form) {
-        self.form = form
+    /// - Parameter field: Model of the infieldation that it's going to be display.
+    public func configure(field: Field) {
+        self.field = field
         clean()
         configureLabels()
         configureTextField()
         configureKeyboard()
     }
     
-    //MARK: Form view properties
+    //MARK: field view properties
     ///To change background color of the view
     @IBInspectable
     var viewColor: UIColor! {
@@ -290,7 +291,7 @@ public class FormView: UIView {
 extension FormView {
     func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "FormView", bundle: bundle)
+        let nib = UINib(nibName: "fieldView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
@@ -317,22 +318,22 @@ extension FormView {
     }
     
     func configureLabels() {
-        self.labelTitle.text = form?.title
-        self.labelSubtitle.text = form?.subtitle
-        self.labelError.text = form?.error
+        self.labelTitle.text = field?.title
+        self.labelSubtitle.text = field?.subtitle
+        self.labelError.text = field?.error
     }
     
     func configureTextField() {
         self.textField.delegate = self
         
-        if let value = form?.value as? String {
+        if let value = field?.value as? String {
             self.textField.text = value
         }
-        self.textField.placeholder = form?.placeholder
+        self.textField.placeholder = field?.placeholder
     }
     
     func configureKeyboard() {
-        guard let type = form?.type else {
+        guard let type = field?.type else {
             return
         }
         
@@ -353,13 +354,41 @@ extension FormView {
         case .url:
             self.textField.keyboardType = .URL
             
-            
+        }
+    }
+}
+
+//MARK: Private methods
+extension FormView {
+    private func updateTable() {
+        var vc: UIViewController?
+        let count: Int = UIApplication.shared.delegate?.window??.rootViewController?.children.count ?? 0
+        let root = UIApplication.shared.delegate?.window??.rootViewController
+        let last =  UIApplication.shared.delegate?.window??.rootViewController?.children.last
+        vc = (count > 0) ? last : root
+        
+        if let views = vc?.view.subviews {
+            for view in views {
+                if let tableView = view as? UITableView {
+                    UIView.performWithoutAnimation {
+                        tableView.beginUpdates()
+                        tableView.endUpdates()
+                    }
+                }
+            }
         }
     }
 }
 
 //MARK: UITextFieldDelegate
 extension FormView: UITextFieldDelegate {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let type = field?.type else {
+            return
+        }
+        self.imageAction.isHidden = (type != .password)
+    }
+    
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let texFieldText = textField.text else {
             return true
@@ -373,24 +402,11 @@ extension FormView: UITextFieldDelegate {
         
         text = (string.isEmpty) ? deleted : (texFieldText + string)
         
-        self.labelError.isHidden = text.isValid(form: self.form)
+        self.labelError.isHidden = text.isValid(field: self.field)
         updateTable()
   
         return true
     }
-    
-    func updateTable() {
-        let vc =  UIApplication.shared.delegate?.window??.rootViewController
-        if let views = vc?.view.subviews {
-            for view in views {
-                if let tableView = view as? UITableView {
-                    UIView.performWithoutAnimation {
-                        tableView.beginUpdates()
-                        tableView.endUpdates()
-                    }
-                }
-            }
-        }
-    }
 }
+
 

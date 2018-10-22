@@ -14,7 +14,7 @@
 		427B572A7DCA9A0C5A7BEA2F1AFF41CD /* FormTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6551450C054B9D6B717750AC830B06D8 /* FormTableView-dummy.m */; };
 		5D94284D6C2A95BCF8607708F33E166A /* Pods-FormTableView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C016E28DDC99B3D6D55C01EFC0CBAA24 /* Pods-FormTableView_Example-dummy.m */; };
 		61C22F4BAE97F4222E46B199454AAE9F /* Pods-FormTableView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E503A246861E5155219EDB02217FB09 /* Pods-FormTableView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69A4580F730570D5739B48DB375BD04C /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BD36437F4B7F06E7DC2E3C12EC820 /* Form.swift */; };
+		69A4580F730570D5739B48DB375BD04C /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BD36437F4B7F06E7DC2E3C12EC820 /* Field.swift */; };
 		A45DD3E15E2E5C1BC512B6E46FC5B85E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		BB3F8BB3EF925AC3CECB04FE32779933 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		D45EAB456AD68197F419F663178CB411 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FC5CA5A35CF0C67F85FF0BFEE72149 /* Constants.swift */; };
@@ -41,7 +41,7 @@
 		29A56AB3F3346F28C836E94EF68BF249 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		29FC5CA5A35CF0C67F85FF0BFEE72149 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		387FB2EAD12FAC1492EAAF2BFE4C4A62 /* Pods-FormTableView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3D1BD36437F4B7F06E7DC2E3C12EC820 /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		3D1BD36437F4B7F06E7DC2E3C12EC820 /* Field.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		49674923CD034BCD1E83C71062E34726 /* Pods-FormTableView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FormTableView_Example-umbrella.h"; sourceTree = "<group>"; };
 		55F987EE03711B58BF8B84BDC6F007CE /* FormTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FormTableView-prefix.pch"; sourceTree = "<group>"; };
 		5E503A246861E5155219EDB02217FB09 /* Pods-FormTableView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FormTableView_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		681BE85958BA82FE29E2F43E8264FCF6 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				3D1BD36437F4B7F06E7DC2E3C12EC820 /* Form.swift */,
+				3D1BD36437F4B7F06E7DC2E3C12EC820 /* Field.swift */,
 			);
 			name = model;
 			path = FormTableView/Classes/model;
@@ -423,7 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D45EAB456AD68197F419F663178CB411 /* Constants.swift in Sources */,
-				69A4580F730570D5739B48DB375BD04C /* Form.swift in Sources */,
+				69A4580F730570D5739B48DB375BD04C /* Field.swift in Sources */,
 				427B572A7DCA9A0C5A7BEA2F1AFF41CD /* FormTableView-dummy.m in Sources */,
 				33B124FF35972C0533B7746E24EE5475 /* FormView.swift in Sources */,
 				04D4F404B7D0D79B7003CB12EDEAB238 /* FormView.xib in Sources */,
