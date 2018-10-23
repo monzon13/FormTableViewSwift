@@ -31,10 +31,10 @@
 		85471D864211CA5E7A8E54ED25B78A2C /* FormTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E4DB0179150F7762C0DD79236851E /* FormTableView-dummy.m */; };
 		8CE675ED3DC71A9D7BD9E7AAD868F157 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB93237CF352DEBFCF409430AA21D4A /* Foundation.framework */; };
 		926C7369329124169B7BB8DEB16BEA4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FD1CF192CA218B57414DF2B080DF20 /* CoreGraphics.framework */; };
-		941607E0217FAD9700030C56 /* password_notshow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E6DA53DD082A42300053AE90705818 /* password_notshow@2x.png */; };
-		941607E1217FAD9B00030C56 /* password_notshow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEDB36160372AD6CF647E36538C97FD /* password_notshow@3x.png */; };
-		941607E2217FAD9E00030C56 /* password_show@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EDCF91A11E3C193D23FB0DB3FF911A7 /* password_show@2x.png */; };
-		941607E3217FADA100030C56 /* password_show@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DE3495E14DF4B7309F48F8B8821393 /* password_show@3x.png */; };
+		941607E4217FADE700030C56 /* password_notshow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E6DA53DD082A42300053AE90705818 /* password_notshow@2x.png */; };
+		941607E5217FADEB00030C56 /* password_notshow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEDB36160372AD6CF647E36538C97FD /* password_notshow@3x.png */; };
+		941607E6217FADEF00030C56 /* password_show@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EDCF91A11E3C193D23FB0DB3FF911A7 /* password_show@2x.png */; };
+		941607E7217FADF300030C56 /* password_show@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DE3495E14DF4B7309F48F8B8821393 /* password_show@3x.png */; };
 		999C13E04C60CDF47BD0601C20112AD9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89F8F89F9202F507C3036E3E8BC663 /* IQUITextFieldView+Additions.swift */; };
 		9B23B3CFBA71B8A6A5387A39243C598E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB93237CF352DEBFCF409430AA21D4A /* Foundation.framework */; };
 		A51DD5841096BDA0C465C9909726087E /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1737E6149ACFEBBD746DA9C5DF23FD5 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -642,11 +642,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				941607E2217FAD9E00030C56 /* password_show@2x.png in Resources */,
-				941607E1217FAD9B00030C56 /* password_notshow@3x.png in Resources */,
-				941607E0217FAD9700030C56 /* password_notshow@2x.png in Resources */,
+				941607E6217FADEF00030C56 /* password_show@2x.png in Resources */,
+				941607E5217FADEB00030C56 /* password_notshow@3x.png in Resources */,
+				941607E4217FADE700030C56 /* password_notshow@2x.png in Resources */,
 				F29B7B2BFB9E4BF1BB42F2BAB83FB163 /* FormTableView.bundle in Resources */,
-				941607E3217FADA100030C56 /* password_show@3x.png in Resources */,
+				941607E7217FADF300030C56 /* password_show@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
