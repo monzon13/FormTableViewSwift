@@ -33,10 +33,6 @@
 		85471D864211CA5E7A8E54ED25B78A2C /* FormTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E4DB0179150F7762C0DD79236851E /* FormTableView-dummy.m */; };
 		8CE675ED3DC71A9D7BD9E7AAD868F157 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB93237CF352DEBFCF409430AA21D4A /* Foundation.framework */; };
 		926C7369329124169B7BB8DEB16BEA4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FD1CF192CA218B57414DF2B080DF20 /* CoreGraphics.framework */; };
-		941607EC217FAEFC00030C56 /* password_notshow@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 08E6DA53DD082A42300053AE90705818 /* password_notshow@2x.png */; };
-		941607ED217FAEFC00030C56 /* password_notshow@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB36160372AD6CF647E36538C97FD /* password_notshow@3x.png */; };
-		941607EE217FAEFC00030C56 /* password_show@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCF91A11E3C193D23FB0DB3FF911A7 /* password_show@2x.png */; };
-		941607EF217FAEFC00030C56 /* password_show@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3495E14DF4B7309F48F8B8821393 /* password_show@3x.png */; };
 		999C13E04C60CDF47BD0601C20112AD9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89F8F89F9202F507C3036E3E8BC663 /* IQUITextFieldView+Additions.swift */; };
 		9B23B3CFBA71B8A6A5387A39243C598E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB93237CF352DEBFCF409430AA21D4A /* Foundation.framework */; };
 		A51DD5841096BDA0C465C9909726087E /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1737E6149ACFEBBD746DA9C5DF23FD5 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,12 +102,12 @@
 		20A6A2D724F05A60C00E98BDE8C26EE9 /* SearchAddressTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SearchAddressTableViewCell.xib; sourceTree = "<group>"; };
 		240182DC1D520D3658BE497B436CBB98 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
 		282BBA14E40141D1C4844D29F6568F7A /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
-		290CE85F76E16DCA2A6A8B79EF73BA26 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B3982C2F9529C11A6863374A38519F0 /* FormTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = FormTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		290CE85F76E16DCA2A6A8B79EF73BA26 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3982C2F9529C11A6863374A38519F0 /* FormTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = FormTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2D45B5ABCF3AE7BD2EBA49AD0EA13AF3 /* FormTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FormTableView.xcconfig; sourceTree = "<group>"; };
 		330596D2D691EDAFF8F68946EA21D57A /* SearchAddressViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
 		387FB2EAD12FAC1492EAAF2BFE4C4A62 /* Pods-FormTableView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3BF49BC34F404616D8DB6CE987D6322F /* Pods_FormTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormTableView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF49BC34F404616D8DB6CE987D6322F /* Pods_FormTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FormTableView_Tests.framework; path = "Pods-FormTableView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F416C4922CE42EA54063A3754368630 /* FormTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FormTableView-umbrella.h"; sourceTree = "<group>"; };
 		49674923CD034BCD1E83C71062E34726 /* Pods-FormTableView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FormTableView_Example-umbrella.h"; sourceTree = "<group>"; };
 		4BDE7E17DC29344386C92EE154D2EE3D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -128,18 +124,18 @@
 		7365D01FBA19348C4EF82566CAEAAB12 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
 		75AD916EBADC7A22B63E90C09290F122 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
 		7A89F8F89F9202F507C3036E3E8BC663 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
-		7C106142D2E541CCCEB34B23F49B0F6A /* FormTableView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormTableView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C106142D2E541CCCEB34B23F49B0F6A /* FormTableView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FormTableView.bundle; path = "FormTableView-FormTableView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC5E5232E8E9062CD689A93143499A0 /* FormView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FormView.xib; sourceTree = "<group>"; };
-		7FD034FF30F0AEFD8769A77ECB09A332 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7FD034FF30F0AEFD8769A77ECB09A332 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		81D4EB6FD6113F9AC59F9F1C9CE71648 /* Pods-FormTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FormTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8266F74070C1D1850D9CF2C874022894 /* Pods-FormTableView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FormTableView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		85B520046B9E90E20A02DA76D960D89B /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
 		87740344B08376E970BCC967C178258F /* FormTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FormTableView.modulemap; sourceTree = "<group>"; };
 		88B79E7DCB4406DA3FEB7E486D3A6581 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
 		88FE81ABACF799429E9B8225B799DFED /* Pods-FormTableView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FormTableView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		90F120884F1E7F1EFCF81FCA583C777B /* FormTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F120884F1E7F1EFCF81FCA583C777B /* FormTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FormTableView.framework; path = FormTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9235BC9FA4B5A0DDDFEA23F09F4DF163 /* Pods-FormTableView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9420C3E51933CD24ED02A9AA32D9B7E1 /* Pods-FormTableView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FormTableView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		96868D7CE2D5839CD6FCE157A73288BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		995CC6025D90B3DD6109391F004027F3 /* Pods-FormTableView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FormTableView_Example-resources.sh"; sourceTree = "<group>"; };
@@ -149,7 +145,7 @@
 		AE479B76493203BE6F2C23B0890AE8A3 /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
 		B41CC9424EE8BD846269936D6201C7C0 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
 		B92D25B3B13F65EC5A43E0446E2DF964 /* Pods-FormTableView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FormTableView_Example.modulemap"; sourceTree = "<group>"; };
-		BB7295F454C472D400E44BCC71E8CD9E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BB7295F454C472D400E44BCC71E8CD9E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		BBEDB36160372AD6CF647E36538C97FD /* password_notshow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "password_notshow@3x.png"; path = "FormTableView/Assets/password_notshow@3x.png"; sourceTree = "<group>"; };
 		BDA5BBD0FDC278B0AC556D35EA7EE60F /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		C00EC6EF934F8FC6ADA5395A8B5D1ACF /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
@@ -161,7 +157,7 @@
 		CB595CEA8706B2F028B4AB2E33B4C2E8 /* IQKeyboardManagerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.xcconfig; sourceTree = "<group>"; };
 		CEDBCA7AB5D4D7860434857C399CC25C /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
 		D1ABE72FD52B515344D39A8A11FC2065 /* Search.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		D1EE2C406311175C7DB651172775D6A4 /* Pods_FormTableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormTableView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1EE2C406311175C7DB651172775D6A4 /* Pods_FormTableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FormTableView_Example.framework; path = "Pods-FormTableView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E8B2C0985F6EE25A2E255D5AB2B0 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		DF5ACC3B0B958BA764EEE30394CD4092 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E3CF855DBBD242515EFB139243DE8167 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,6 +336,7 @@
 				330596D2D691EDAFF8F68946EA21D57A /* SearchAddressViewController.swift */,
 				AF30E5CB8369CBDDBA768D4E3FEDF820 /* cell */,
 			);
+			name = search;
 			path = search;
 			sourceTree = "<group>";
 		};
@@ -395,6 +392,7 @@
 				578C51CA59954E441E3C8F58A2921C7C /* SearchAddressTableViewCell.swift */,
 				20A6A2D724F05A60C00E98BDE8C26EE9 /* SearchAddressTableViewCell.xib */,
 			);
+			name = cell;
 			path = cell;
 			sourceTree = "<group>";
 		};
@@ -412,6 +410,7 @@
 				1AC5C27F2981016AAF6DC6D1587F7CB5 /* FormView.swift */,
 				7CC5E5232E8E9062CD689A93143499A0 /* FormView.xib */,
 			);
+			name = form;
 			path = form;
 			sourceTree = "<group>";
 		};
@@ -446,6 +445,7 @@
 				AC98499BC80B46CCCF7BF7194B59BC3B /* Resources */,
 				AE26477BD291332E6750EF7F4B0B9BD8 /* Support Files */,
 			);
+			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -737,10 +737,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				941607EC217FAEFC00030C56 /* password_notshow@2x.png in Sources */,
-				941607ED217FAEFC00030C56 /* password_notshow@3x.png in Sources */,
-				941607EE217FAEFC00030C56 /* password_show@2x.png in Sources */,
-				941607EF217FAEFC00030C56 /* password_show@3x.png in Sources */,
 				08EC283A9CC627D75910C131AF42E626 /* Address.swift in Sources */,
 				033CC496F05235BE0E5E6ED31AF215BE /* Constants.swift in Sources */,
 				78FBF1391B8ABBACC2AE997E83FC2DF2 /* Field.swift in Sources */,
@@ -903,7 +899,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
