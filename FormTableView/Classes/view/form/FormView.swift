@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 // - View Class -
 @IBDesignable
@@ -17,9 +18,21 @@ public class FormView: UIView {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelSubtitle: UILabel!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var imageAction: UIImageView!
+    @IBOutlet weak var buttonAction: UIButton!
     @IBOutlet weak var viewLine: UIView!
     @IBOutlet weak var labelError: UILabel!
+    
+    //MARK: IBActions
+    @IBAction func buttonAction(_ sender: Any) {
+        if self.textField.isSecureTextEntry {
+            self.buttonAction.setImage(UIImage(named: "password_notshow"), for: .normal)
+        }
+        else {
+            self.buttonAction.setImage(UIImage(named: "password_show"), for: .normal)
+        }
+        self.textField.isSecureTextEntry = !self.textField.isSecureTextEntry
+        
+    }
     
     var field: Field?
     var vc: UIViewController?
@@ -48,6 +61,8 @@ public class FormView: UIView {
     /// - Parameter field: Model of the infieldation that it's going to be display.
     public func configure(field: Field) {
         self.field = field
+        IQKeyboardManager.shared.enable = true
+        
         clean()
         configureLabels()
         configureTextField()
@@ -365,13 +380,56 @@ extension FormView {
         }
         switch type {
         case .address:
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
-            self.textField.isUserInteractionEnabled = true
-            self.textField.addGestureRecognizer(tap)
+            configureAddressAction()
+            
+        case .date:
+            configureDateAction()
             
         default:
             break
         }
+    }
+    
+    func configureAddressAction() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
+        self.textField.isUserInteractionEnabled = true
+        self.textField.addGestureRecognizer(tap)
+    }
+    
+    func configureDateAction() {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePicker.Mode.date
+        datePickerView.maximumDate = Calendar.current.date(byAdding: .year, value: 0, to: Date())
+        textField.tintColor = UIColor.clear
+        textField.inputView = datePickerView
+        
+        if let defaultValue = field?.value as? String, !defaultValue.isEmpty {
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale.current
+            //dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            
+            if let date = dateFormatter.date(from: defaultValue) {
+                let formatter = DateFormatter()
+                formatter.dateStyle = .medium
+                formatter.locale = Locale.current
+                textField.text = formatter.string(from: date)
+                datePickerView.date = date
+            }
+            else {
+                textField.text = nil
+            }
+        }
+        else if let date = field?.value as? Date {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            textField.text = formatter.string(from: date)
+            datePickerView.date = date
+        }
+        else {
+            textField.text = nil
+        }
+        
+        datePickerView.addTarget(self, action: #selector(FormView.datePickerDidChange(_:)), for: UIControl.Event.valueChanged)
     }
 }
 
@@ -400,6 +458,17 @@ extension FormView {
             vc?.present(searchVC, animated: true, completion: nil)
         }
     }
+    
+    @objc func datePickerDidChange(_ pickerDate: UIDatePicker) {
+        let value = pickerDate.date
+        field?.value = value as AnyObject
+        
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.locale = Locale.current
+        textField.text = formatter.string(from: value)
+    }
 }
 
 //MARK: UITextFieldDelegate
@@ -408,7 +477,8 @@ extension FormView: UITextFieldDelegate {
         guard let type = field?.type else {
             return
         }
-        self.imageAction.isHidden = (type != .password)
+//        self.buttonAction.isHidden = (type != .password)
+        updateTable()
     }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

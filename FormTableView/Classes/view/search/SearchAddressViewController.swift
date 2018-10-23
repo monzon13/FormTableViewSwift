@@ -39,7 +39,7 @@ class SearchAddressViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = SearchAddressTableViewCell.estimateheigth
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.tableFooterView = UIView()
         
         let bundle = Bundle(for: self.classForCoder)
@@ -50,6 +50,7 @@ class SearchAddressViewController: UIViewController {
     
     func configureSearch() {
         self.searchBar.delegate = self
+        self.searchBar.becomeFirstResponder()
     }
         
 }
@@ -65,6 +66,13 @@ extension SearchAddressViewController: UISearchBarDelegate {
                 // Fallback on earlier versions
             }
         }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.showsCancelButton = false
+        self.searchBar.resignFirstResponder()
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -84,6 +92,7 @@ extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSourc
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.searchBar.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
     

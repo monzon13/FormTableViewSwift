@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormView" customModule="FormTableView" customModuleProvider="target">
             <connections>
-                <outlet property="imageAction" destination="dLb-TJ-pfh" id="71u-JJ-OP2"/>
+                <outlet property="buttonAction" destination="e64-Fm-5RJ" id="x2Z-8n-vHK"/>
                 <outlet property="labelError" destination="NDg-uP-Cz7" id="TKf-rL-XBN"/>
                 <outlet property="labelSubtitle" destination="Eit-7u-vhc" id="KvH-gz-S6X"/>
                 <outlet property="labelTitle" destination="iEt-PY-23z" id="2kN-cr-hfH"/>
@@ -38,27 +38,31 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eit-7u-vhc">
-                                    <rect key="frame" x="0.0" y="26.5" width="375" height="13.5"/>
+                                    <rect key="frame" x="0.0" y="25.5" width="375" height="13.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-AJ-dAS">
-                                    <rect key="frame" x="0.0" y="49.5" width="375" height="20"/>
+                                    <rect key="frame" x="0.0" y="47.5" width="375" height="22"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKt-fv-cB0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="22"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dLb-TJ-pfh">
-                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e64-Fm-5RJ">
+                                            <rect key="frame" x="353" y="0.0" width="22" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="dLb-TJ-pfh" secondAttribute="height" multiplier="1:1" id="6Zy-Jj-Mms"/>
-                                                <constraint firstAttribute="height" constant="20" id="U5p-om-2c6"/>
+                                                <constraint firstAttribute="height" constant="22" id="6uq-Ti-dUn"/>
+                                                <constraint firstAttribute="width" secondItem="e64-Fm-5RJ" secondAttribute="height" multiplier="1:1" id="f6g-l3-GNe"/>
                                             </constraints>
-                                        </imageView>
+                                            <state key="normal" image="password_show.png"/>
+                                            <connections>
+                                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="SKu-z0-0Z1"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </stackView>
                             </subviews>
@@ -91,4 +95,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
         </view>
     </objects>
+    <resources>
+        <image name="password_show.png" width="22" height="14"/>
+    </resources>
 </document>
