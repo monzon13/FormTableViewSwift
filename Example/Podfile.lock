@@ -6,14 +6,18 @@ PODS:
 DEPENDENCIES:
   - FormTableView (from `/Users/jmh/FormTableView`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManagerSwift
+
 EXTERNAL SOURCES:
   FormTableView:
-    :path: /Users/jmh/FormTableView
+    :path: "/Users/jmh/FormTableView"
 
 SPEC CHECKSUMS:
   FormTableView: 39538ae11e8b706bf2d196c4b8d3f79ab264d7bd
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
 
-PODFILE CHECKSUM: a1a124c64d96d6011352ea5202489628930329d4
+PODFILE CHECKSUM: da1455bd13df6ba93a0e84ba96ad049ee23b8b06
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
