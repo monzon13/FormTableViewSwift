@@ -17,26 +17,19 @@ FormTableView is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-use_frameworks!
+pod 'FormTableView', :git => 'https://github.com/jmhdevelop/FormTableView.git'
 
-target 'FormTableView_Example' do
-
-pod 'FormTableView', :path => '/Users/jmh/FormTableView'
-
-target 'FormTableView_Tests' do
-inherit! :search_paths
-
-
-end
-end
-
+```
+also add this to your Podfiel
+```ruby
 post_install do |installer|
-installer.pods_project.targets.each do |target|
-target.build_configurations.each do |config|
-config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
-end
-end
-end
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
+            end
+        end
+    end
+
 ```
 
 ## Author
