@@ -18,21 +18,9 @@ public class FormView: UIView {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelSubtitle: UILabel!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var buttonAction: UIButton!
     @IBOutlet weak var viewLine: UIView!
     @IBOutlet weak var labelError: UILabel!
     
-    //MARK: IBActions
-    @IBAction func buttonAction(_ sender: Any) {
-        if self.textField.isSecureTextEntry {
-            self.buttonAction.setImage(UIImage(named: "password_notshow"), for: .normal)
-        }
-        else {
-            self.buttonAction.setImage(UIImage(named: "password_show"), for: .normal)
-        }
-        self.textField.isSecureTextEntry = !self.textField.isSecureTextEntry
-        
-    }
     
     var field: Field?
     var vc: UIViewController?
@@ -406,7 +394,6 @@ extension FormView {
         if let defaultValue = field?.value as? String, !defaultValue.isEmpty {
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale.current
-            //dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
             
             if let date = dateFormatter.date(from: defaultValue) {
                 let formatter = DateFormatter()
@@ -474,11 +461,7 @@ extension FormView {
 //MARK: UITextFieldDelegate
 extension FormView: UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField) {
-        guard let type = field?.type else {
-            return
-        }
-//        self.buttonAction.isHidden = (type != .password)
-        updateTable()
+
     }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
