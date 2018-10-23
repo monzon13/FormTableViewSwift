@@ -33,9 +33,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'FormTableView/Classes/**/*.{swift,xib,storyboard}'
   
-#   s.resource_bundles = {
-#     'FormTableView' => ['FormTableView/Assets/**/*.png']
-#   }
+   s.resource_bundles = {
+     'FormTableView' => ['FormTableView/Assets/**/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

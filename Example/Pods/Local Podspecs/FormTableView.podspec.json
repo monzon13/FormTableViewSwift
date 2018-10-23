@@ -20,6 +20,11 @@
   },
   "swift_version": "4.2",
   "source_files": "FormTableView/Classes/**/*.{swift,xib,storyboard}",
+  "resource_bundles": {
+    "FormTableView": [
+      "FormTableView/Assets/**/*.png"
+    ]
+  },
   "dependencies": {
     "IQKeyboardManagerSwift": [
 
