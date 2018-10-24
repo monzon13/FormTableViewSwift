@@ -1,8 +1,8 @@
 os: osx
 language: objective-c
 osx_image: xcode10
-xcode_project: Example/FormTableView.xcodeproj
-xcode_scheme: FormTableView
+xcode_project: FormTableView.xcodeproj
+xcode_scheme: Example/FormTableView
 before_install:
 - sudo gem install activesupport -v 4.2.6
 - rvm install 2.3.1
