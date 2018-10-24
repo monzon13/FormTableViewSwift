@@ -10,5 +10,5 @@ before_install:
 - rvm use 2.3.1
 - sudo gem install cocoapods
 script:
-- xcodebuild -workspace FormTableView.xcworkspace -scheme FormTableView-Example -sdk iphonesimulator
+- xcodebuild -workspace Example/FormTableView.xcworkspace -scheme FormTableView-Example -sdk iphonesimulator
 
