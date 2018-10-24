@@ -12,7 +12,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   FormTableView:
-    :path: "/Users/jmh/FormTableView"
+    :path: "."
 
 SPEC CHECKSUMS:
   FormTableView: 52641589e38ae2e37fe096b6b86aeb6d585ee67b
