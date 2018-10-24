@@ -3,8 +3,6 @@ os: osx
 language: objective-c
 osx_image: xcode10
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone x
-# * https://www.objc.io/issues/6-build-tools/travis-ci/
-# * https://github.com/supermarin/xcpretty#usage
 
 cache: cocoapods
 podfile: Example/Podfile
@@ -13,6 +11,11 @@ before_install:
  - rvm install 2.3.1
  - rvm use 2.3.1
  - sudo gem install cocoapods
+ 
 script:
- - set -o pipefail && xcodebuild -verbose -workspace Example/FormTableView.xcworkspace  -scheme FormTableView-Example 
+ - set -o pipefail && xcodebuild 
+ -allowProvisioningUpdates
+ -verbose 
+ -workspace Example/FormTableView.xcworkspace  
+ -scheme FormTableView-Example 
  - pod lib lint
