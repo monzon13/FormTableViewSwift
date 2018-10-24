@@ -1,6 +1,0 @@
-framework module FormTableView {
-  umbrella header "FormTableView-umbrella.h"
-
-  export *
-  module * { export * }
-}
