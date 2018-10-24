@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'FormTableView_Example' do
     
-    pod 'FormTableView', :git => 'https://github.com/jmhdevelop/FormTableView.git'
+    pod 'FormTableView', :path => "."
 
   target 'FormTableView_Tests' do
     inherit! :search_paths
