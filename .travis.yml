@@ -1,6 +1,6 @@
 os: osx
 language: objective-c
 osx_image: xcode10    
-xcode_project: FormTableView.xcworkspace	
+xcode_project: FormTableView.xcodeproj	
 xcode_scheme: FormTableView-Example
 
