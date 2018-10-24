@@ -1,6 +1,6 @@
 # FormTableView
 
-[![CI Status](https://img.shields.io/travis/jmhdevep/FormTableView.svg?style=flat)](https://travis-ci.org/jmhdevep/FormTableView)
+[![CI Status](https://img.shields.io/travis/jmhdevep/FormTableView.svg?style=flat)](https://travis-ci.org/jmhdevep/FormTableViewSwift)
 [![Version](https://img.shields.io/cocoapods/v/FormTableView.svg?style=flat)](https://cocoapods.org/pods/FormTableView)
 [![License](https://img.shields.io/cocoapods/l/FormTableView.svg?style=flat)](https://cocoapods.org/pods/FormTableView)
 [![Platform](https://img.shields.io/cocoapods/p/FormTableView.svg?style=flat)](https://cocoapods.org/pods/FormTableView)
