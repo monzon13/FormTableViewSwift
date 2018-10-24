@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 pod 'FormTableView', :git => 'https://github.com/jmhdevelop/FormTableView.git'
 
 ```
-also add this to your Podfile:
+also add this to end:
 ```ruby
 post_install do |installer|
     installer.pods_project.targets.each do |target|
