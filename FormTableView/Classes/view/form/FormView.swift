@@ -378,6 +378,10 @@ extension FormView {
         }
     }
     
+    func updateTexField(value: String) {
+        textField.text = value
+    }
+    
     func configureAddressAction() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
         self.textField.isUserInteractionEnabled = true

@@ -24,6 +24,7 @@ class SearchAddressViewController: UIViewController {
     }()
     
     var searchSource: [Address]?
+    var vc: UIViewController?
     
     
     //MARK: - Lifecycle methods
@@ -52,7 +53,29 @@ class SearchAddressViewController: UIViewController {
         self.searchBar.delegate = self
         self.searchBar.becomeFirstResponder()
     }
+    
+    private func updateField(value: String) {
+        vc = (count > 0) ? last : root
         
+        if let views = vc?.view.subviews {
+            for view in views {
+                let tableView = view as? UITableView
+                if let cells = tableView?.visibleCells {
+                    for cell in cells {
+                        let cellViews = cell.contentView.subviews
+                        for cellview in cellViews {
+                            if let formView = cellview as? FormView,
+                               let field = formView.field {
+                                if field.type == .address {
+                                    formView.updateTexField(value: value)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //MARK: UISearchBarDelegate
@@ -93,6 +116,9 @@ extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchBar.resignFirstResponder()
+        
+        let value = (searchSource?[indexPath.row].title ?? "") + " " + (searchSource?[indexPath.row].subtitle ?? "")
+        updateField(value: value)
         self.dismiss(animated: true, completion: nil)
     }
     
