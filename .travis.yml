@@ -16,9 +16,9 @@ script:
  #- set -o pipefail
  #- xcodebuild CODE_SIGNING_REQUIRED=NO
  xctool 
- - sdk iphonesimulator
  - workspace Example/FormTableView.xcworkspace  
  - scheme FormTableView-Example 
+ - sdk iphonesimulator
   build 
   test
   ONLY_ACTIVE_ARCH=NO
