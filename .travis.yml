@@ -12,8 +12,9 @@ before_install:
  - sudo gem install cocoapods
  
 script:
- - xcodebuild
- - workspace Example/FormTableView.xcworkspace  
- - scheme FormTableView-Example 
- - sdk iphonesimulator
-  build 
+ #- xcodebuild
+ #- workspace Example/FormTableView.xcworkspace  
+ #- scheme FormTableView-Example 
+ #- sdk iphonesimulator
+ # build 
+ - pod lib lint
