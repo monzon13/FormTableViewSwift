@@ -1,4 +1,4 @@
-# FormTableViewSwift
+# FormTableView
 
 [![Status](https://travis-ci.org/jmhdevelop/FormTableViewSwift.svg?branch=master)](https://travis-ci.org/jmhdevelop/FormTableViewSwift)
 [![Version](https://img.shields.io/cocoapods/v/FormTableViewSwift.svg?style=flat)](https://cocoapods.org/pods/FormTableViewSwift)
