@@ -1,5 +1,5 @@
 references:
-language: swift
+language: objective-c
 osx_image: xcode10
 #xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone x
 
@@ -10,7 +10,8 @@ before_install:
  - rvm install 2.3.1
  - rvm use 2.3.1
  - sudo gem install cocoapods
+ - brew install swiftlint || true
  
 script:
- - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/FormTableView.xcworkspace -scheme FormTableView-Example -sdk iphonesimulator12.0 ONLY_ACTIVE_ARCH=NO
+ - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/FormTableView.xcworkspace -scheme FormTableView-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
  - pod lib lint
