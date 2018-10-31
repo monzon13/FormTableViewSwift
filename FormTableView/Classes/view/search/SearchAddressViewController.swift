@@ -58,34 +58,7 @@ class SearchAddressViewController: UIViewController {
         vc = (count > 0) ? last : root
         
         if let views = vc?.view.subviews {
-            self.searchForTable(value: value, views: views)
-        }
-    }
-    
-    private func searchForTable(value: String, views: [UIView]) {
-        for view in views {
-            let tableView = view as? UITableView
-            if let cells = tableView?.visibleCells {
-                self.searchForCell(value: value, cells: cells)
-            }
-        }
-    }
-    
-    private func searchForCell(value: String, cells: [UITableViewCell]) {
-        for cell in cells {
-            let cellViews = cell.contentView.subviews
-            self.searchForFormView(value: value, views: cellViews)
-        }
-    }
-    
-    private func searchForFormView(value: String, views: [UIView]) {
-        for view in views {
-            if let formView = view as? FormView,
-                let field = formView.field {
-                if field.type == .address {
-                    formView.updateTexField(value: value)
-                }
-            }
+            searchForTable(value: value, views: views)
         }
     }
 }
