@@ -43,14 +43,7 @@ public class Field {
     ///   - placeholder: An example of the value its going to set in the field.
     ///   - regEx: A regular expression to verify the field value.
     ///   - error: The error message its going to be displayed when it's not true the regular expression.
-    public init(type: Type, 
-                id: Int, 
-                title: String, 
-                subtitle: String? = nil, 
-                value: AnyObject? = nil, 
-                placeholder: String? = nil, 
-                regEx: String? = nil, 
-                error: String? = nil) {
+    public init(type: Type, id: Int,title: String, subtitle: String? = nil, value: AnyObject? = nil, placeholder: String? = nil, regEx: String? = nil, error: String? = nil) {
         self.type = type
         self.id = id
         self.title = title
