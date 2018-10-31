@@ -14,8 +14,7 @@ before_install:
  
 script:
  - set -o pipefail
- - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
- - verbose 
+ - xcodebuild CODE_SIGNING_REQUIRED=NO
  - workspace Example/FormTableView.xcworkspace  
  - scheme FormTableView-Example 
  - pod lib lint
