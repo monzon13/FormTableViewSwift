@@ -21,7 +21,6 @@ public class FormView: UIView {
     @IBOutlet weak var viewLine: UIView!
     @IBOutlet weak var labelError: UILabel!
     
-    
     var field: Field?
     var vc: UIViewController?
     
@@ -36,7 +35,6 @@ public class FormView: UIView {
         xibSetup()
         self.layoutSubviews()
     }
-    
     
     override public var description : String {
         return "It's a view that simplify the configuration of a field and can be easily configure on the attributes inspector."

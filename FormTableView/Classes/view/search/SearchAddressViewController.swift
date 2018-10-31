@@ -62,7 +62,7 @@ class SearchAddressViewController: UIViewController {
     }
 }
 
-//MARK: UISearchBarDelegate
+//MARK:UISearchBarDelegate
 extension SearchAddressViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         //change searchCompleter depends on searchBar's text
@@ -83,20 +83,21 @@ extension SearchAddressViewController: UISearchBarDelegate {
     }
 }
 
-//MARK: UITableViewDelegate, UITableViewDataSource
+//MARK:UITableViewDelegate, UITableViewDataSource
 extension SearchAddressViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchSource?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: SearchAddressTableViewCell = tableView.dequeueReusableCell(withIdentifier: SearchAddressTableViewCell.ID, for: indexPath) as! SearchAddressTableViewCell
+        guard let cell: SearchAddressTableViewCell = tableView.dequeueReusableCell(withIdentifier: SearchAddressTableViewCell.ID, for: indexPath) as? SearchAddressTableViewCell else {
+            return UITableViewCell()
+        }
         
         cell.configure(searchSource?[indexPath.row])
         
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchBar.resignFirstResponder()
