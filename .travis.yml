@@ -1,7 +1,7 @@
 references:
 language: swift
 osx_image: xcode10
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone x
+#xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone x
 
 cache: cocoapods
 podfile: Example/Podfile
@@ -12,5 +12,5 @@ before_install:
  - sudo gem install cocoapods
  
 script:
- - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/FormTableView.xcworkspace -scheme FormTableView-Example -sdk iphonesimulator12.0 ONLY_ACTIVE_ARCH=NO | xcpretty
+ - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/FormTableView.xcworkspace -scheme FormTableView-Example -sdk iphonesimulator12.0 ONLY_ACTIVE_ARCH=NO
  - pod lib lint
