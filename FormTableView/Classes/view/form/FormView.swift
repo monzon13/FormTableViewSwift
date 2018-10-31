@@ -428,13 +428,15 @@ extension FormView {
     }
     
     private func searchForTable(views: [UIView]) {
-        for view in views {
-            if let tableView = view as? UITableView {
-                UIView.performWithoutAnimation {
-                    tableView.beginUpdates()
-                    tableView.endUpdates()
-                }
-            }
+        let formViews = views.map({ $0 as? UITableView })
+        
+        guard let tableView = formViews.first else {
+            return
+        }
+    
+        UIView.performWithoutAnimation {
+            tableView?.beginUpdates()
+            tableView?.endUpdates()
         }
     }
     
