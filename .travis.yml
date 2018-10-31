@@ -18,4 +18,4 @@ script:
  xctool -sdk iphonesimulator
  - workspace Example/FormTableView.xcworkspace  
  - scheme FormTableView-Example 
- - pod lib lint
+ #- pod lib lint
