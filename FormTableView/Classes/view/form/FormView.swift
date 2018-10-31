@@ -428,12 +428,16 @@ extension FormView {
         vc = (count > 0) ? last : root
         
         if let views = vc?.view.subviews {
-            for view in views {
-                if let tableView = view as? UITableView {
-                    UIView.performWithoutAnimation {
-                        tableView.beginUpdates()
-                        tableView.endUpdates()
-                    }
+            self.searchForTable(views: views)
+        }
+    }
+    
+    private func searchForTable(views: [UIView]) {
+        for view in views {
+            if let tableView = view as? UITableView {
+                UIView.performWithoutAnimation {
+                    tableView.beginUpdates()
+                    tableView.endUpdates()
                 }
             }
         }
