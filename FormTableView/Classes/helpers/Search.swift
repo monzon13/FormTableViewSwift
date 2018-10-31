@@ -24,12 +24,14 @@ private func searchForCell(value: String, cells: [UITableViewCell]) {
 }
 
 private func searchForFormView(value: String, views: [UIView]) {
-    for view in views {
-        if let formView = view as? FormView,
-            let field = formView.field {
-            if field.type == .address {
-                formView.updateTexField(value: value)
-            }
-        }
+    let formViews = views.map({ $0 as? FormView })
+    
+    guard let formView = formViews.first,
+        let field = formView?.field else {
+        return
+    }
+    
+    if field.type == .address {
+        formView?.updateTexField(value: value)
     }
 }
