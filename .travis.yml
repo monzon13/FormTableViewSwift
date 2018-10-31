@@ -1,5 +1,5 @@
 references:
-os: osx
+os: iOS
 language: swift
 osx_image: xcode10
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone x
@@ -14,8 +14,7 @@ before_install:
  
 script:
  #- set -o pipefail
- #- xcodebuild CODE_SIGNING_REQUIRED=NO
- xctool 
+ - xcodebuild CODE_SIGNING_REQUIRED=NO
  - workspace Example/FormTableView.xcworkspace  
  - scheme FormTableView-Example 
  - sdk iphonesimulator
