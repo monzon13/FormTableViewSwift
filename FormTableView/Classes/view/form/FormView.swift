@@ -406,18 +406,15 @@ extension FormView {
                 formatter.locale = Locale.current
                 textField.text = formatter.string(from: date)
                 datePickerView.date = date
-            }
-            else {
+            }else {
                 textField.text = nil
             }
-        }
-        else if let date = field?.value as? Date {
+        }else if let date = field?.value as? Date {
             let formatter = DateFormatter()
             formatter.dateStyle = .medium
             textField.text = formatter.string(from: date)
             datePickerView.date = date
-        }
-        else {
+        }else {
             textField.text = nil
         }
         

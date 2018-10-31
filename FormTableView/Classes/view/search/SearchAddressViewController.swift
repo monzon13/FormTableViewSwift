@@ -26,7 +26,6 @@ class SearchAddressViewController: UIViewController {
     var searchSource: [Address]?
     var vc: UIViewController?
     
-    
     //MARK:-Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
