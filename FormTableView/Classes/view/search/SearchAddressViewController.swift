@@ -11,7 +11,7 @@ import MapKit
 class SearchAddressViewController: UIViewController {
     static let ID = "SearchAddressViewController"
     
-    //MARK: IBOutlets
+    //MARK:IBOutlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,7 +27,7 @@ class SearchAddressViewController: UIViewController {
     var vc: UIViewController?
     
     
-    //MARK: - Lifecycle methods
+    //MARK:-Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +35,7 @@ class SearchAddressViewController: UIViewController {
         configureSearch()
     }
     
-    //MARK: Configure methods
+    //MARK:Configure methods
     func configureTable() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
