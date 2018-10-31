@@ -13,8 +13,8 @@ before_install:
  - sudo gem install cocoapods
  
 script:
- - set -o pipefail
- - xcodebuild CODE_SIGNING_REQUIRED=NO
- - workspace Example/FormTableView.xcworkspace  
- - scheme FormTableView-Example 
+ #- set -o pipefail
+ #- xcodebuild CODE_SIGNING_REQUIRED=NO
+ #- workspace Example/FormTableView.xcworkspace  
+ #- scheme FormTableView-Example 
  - pod lib lint
