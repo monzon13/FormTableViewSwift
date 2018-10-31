@@ -37,8 +37,7 @@ extension String {
             default:
                 break
             }
-        }
-        
+        }      
         return regEx
     }
 }
