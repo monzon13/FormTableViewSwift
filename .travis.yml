@@ -13,9 +13,8 @@ before_install:
  
 script:
  - set -o pipefail
- - xcodebuild CODE_SIGNING_REQUIRED=NO
+ - xcodebuild
  - workspace Example/FormTableView.xcworkspace  
  - scheme FormTableView-Example 
  - sdk iphonesimulator
- - pod lib lint
   build 
