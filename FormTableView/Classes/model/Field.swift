@@ -26,11 +26,11 @@ public class Field {
     var type: Type
     var id: Int
     var title: String
-    var subtitle: String? = nil
-    var value: AnyObject? = nil
-    var placeholder: String? = nil
-    var regEx: String? = nil
-    var error: String? = nil
+    var subtitle: String?
+    var value: AnyObject?
+    var placeholder: String?
+    var regEx: String?
+    var error: String?
     
     /// Model of the information that it's going to be display.
     ///
