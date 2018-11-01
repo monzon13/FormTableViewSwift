@@ -13,7 +13,6 @@ class SearchAddressViewPresenter {
     
     var searchSource: [Address]?
     
-    
     func viewReady() {
         view.configureSearch()
         view.configureTable()
@@ -32,12 +31,13 @@ class SearchAddressViewPresenter {
     }
     
     func searchForTable(value: String, views: [UIView]) {
-        for view in views {
-            let tableView = view as? UITableView
-            if let cells = tableView?.visibleCells {
-                searchForCell(value: value, cells: cells)
-            }
+        let tableViews = views.map({ $0 as? UITableView })
+        
+        guard let tableView = tableViews.first,
+              let cells = tableView?.visibleCells else {
+                return
         }
+        searchForCell(value: value, cells: cells)
     }
     
     func searchForCell(value: String, cells: [UITableViewCell]) {
