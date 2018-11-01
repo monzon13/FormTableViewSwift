@@ -15,4 +15,12 @@ extension UIView {
         
         return datePickerView
     }
+    
+    func dateMediumFormat() -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.locale = Locale.current
+        
+        return formatter
+    }
 }
