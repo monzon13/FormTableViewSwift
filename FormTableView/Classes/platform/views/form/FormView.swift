@@ -51,7 +51,9 @@ public class FormView: UIView {
     private func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "FormView", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        guard let view = nib.instantiate(withOwner: self, options: nil)[0] as? UIView else {
+            return UIView()
+        }
         
         return view
     }
