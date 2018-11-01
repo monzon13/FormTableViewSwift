@@ -14,7 +14,7 @@ extension String {
             let valueTest = NSPredicate(format:"SELF MATCHES %@", newRegEx)
             
             return valueTest.evaluate(with: self)
-        }else {
+        } else {
             return true
         }
     }
@@ -24,7 +24,7 @@ extension String {
         
         if let newRegEx = field.regEx, !newRegEx.isEmpty {
             regEx = newRegEx
-        }else {
+        } else {
             switch field.type {
             case .email:
                 regEx = REG_EX_EMAIL
