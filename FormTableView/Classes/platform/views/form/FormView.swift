@@ -112,6 +112,8 @@ extension FormView: FormViewView {
         guard let type = field?.type else {
             return
         }
+        self.textField.inputView = nil
+        self.textField.reloadInputViews()
         
         switch type {
         case .none, .picker, .date, .address:
