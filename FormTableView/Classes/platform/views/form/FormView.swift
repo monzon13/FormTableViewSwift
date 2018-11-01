@@ -16,16 +16,15 @@ public class FormView: UIView {
     var presenter: FormViewPresenter!
     var connector: FormViewConnector!
     
-    var _fontSize:CGFloat = 18
-    var _fontName:String = "Helvetica"
-    var _fontSubtitleSize:CGFloat = 18
-    var _fontSubtitleName:String = "Helvetica-Thin"
-    var _fontTextleSize:CGFloat = 18
-    var _fontTextName:String = "Helvetica-Light"
-    var _fonterrorSize:CGFloat = 11
-    var _lineHidden: Bool = false
-    var _fontErrorName:String = "Helvetica-Light"
-    var _errorHidden: Bool = false
+    //MARK: IBInspectable parameters
+    var fontSize:CGFloat = 18
+    var fontName:String = "Helvetica"
+    var fontSubtitleSize:CGFloat = 18
+    var fontSubtitleName:String = "Helvetica-Thin"
+    var fontTextleSize:CGFloat = 18
+    var fontTextName:String = "Helvetica-Light"
+    var fonterrorSize:CGFloat = 11
+    var fontErrorName:String = "Helvetica-Light"
 
     //MARK: IBOutlets
     var view: UIView!

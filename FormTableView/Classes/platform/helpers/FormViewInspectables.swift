@@ -48,11 +48,11 @@ extension FormView {
     @IBInspectable
     var titleSize: CGFloat {
         set {
-            _fontSize = newValue
-            labelTitle.font = UIFont(name: _fontName, size: _fontSize)
+            fontSize = newValue
+            labelTitle.font = UIFont(name: fontName, size: fontSize)
         }
         get {
-            return _fontSize
+            return fontSize
         }
     }
     
@@ -60,11 +60,11 @@ extension FormView {
     @IBInspectable
     var titleFont: String {
         set {
-            _fontName = newValue
-            labelTitle.font = UIFont(name: _fontName, size: _fontSize)
+            fontName = newValue
+            labelTitle.font = UIFont(name: fontName, size: fontSize)
         }
         get {
-            return _fontName
+            return fontName
         }
     }
     
@@ -95,11 +95,11 @@ extension FormView {
     @IBInspectable
     var subtitleSize: CGFloat {
         set {
-            _fontSubtitleSize = newValue
-            labelTitle.font = UIFont(name: _fontName, size: _fontSubtitleSize)
+            fontSubtitleSize = newValue
+            labelTitle.font = UIFont(name: fontName, size: fontSubtitleSize)
         }
         get {
-            return _fontSubtitleSize
+            return fontSubtitleSize
         }
     }
     
@@ -107,11 +107,11 @@ extension FormView {
     @IBInspectable
     var subtitleFont: String {
         set {
-            _fontSubtitleName = newValue
-            labelTitle.font = UIFont(name: _fontSubtitleName, size: _fontSubtitleSize)
+            fontSubtitleName = newValue
+            labelTitle.font = UIFont(name: fontSubtitleName, size: fontSubtitleSize)
         }
         get {
-            return _fontSubtitleName
+            return fontSubtitleName
         }
     }
     
@@ -142,11 +142,11 @@ extension FormView {
     @IBInspectable
     var fieldSize: CGFloat {
         set {
-            _fontTextleSize = newValue
-            labelTitle.font = UIFont(name: _fontTextName, size: _fontTextleSize)
+            fontTextleSize = newValue
+            labelTitle.font = UIFont(name: fontTextName, size: fontTextleSize)
         }
         get {
-            return _fontSubtitleSize
+            return fontSubtitleSize
         }
     }
     
@@ -154,11 +154,11 @@ extension FormView {
     @IBInspectable
     var fieldFont: String {
         set {
-            _fontTextName = newValue
-            labelTitle.font = UIFont(name: _fontTextName, size: _fontSubtitleSize)
+            fontTextName = newValue
+            labelTitle.font = UIFont(name: fontTextName, size: fontSubtitleSize)
         }
         get {
-            return _fontSubtitleName
+            return fontSubtitleName
         }
     }
     
@@ -201,11 +201,10 @@ extension FormView {
     @IBInspectable
     var lineHidden: Bool {
         set {
-            _lineHidden = newValue
-            viewLine.isHidden = _lineHidden
+            viewLine.isHidden = newValue
         }
         get {
-            return _lineHidden
+            return viewLine.isHidden
         }
     }
     
@@ -236,11 +235,11 @@ extension FormView {
     @IBInspectable
     var errorSize: CGFloat {
         set {
-            _fonterrorSize = newValue
-            labelError.font = UIFont(name: _fontName, size: _fonterrorSize)
+            fonterrorSize = newValue
+            labelError.font = UIFont(name: fontName, size: fonterrorSize)
         }
         get {
-            return _fonterrorSize
+            return fonterrorSize
         }
     }
     
@@ -248,11 +247,11 @@ extension FormView {
     @IBInspectable
     var errorFont: String {
         set {
-            _fontErrorName = newValue
-            labelError.font = UIFont(name: _fontErrorName, size: _fonterrorSize)
+            fontErrorName = newValue
+            labelError.font = UIFont(name: fontErrorName, size: fonterrorSize)
         }
         get {
-            return _fontErrorName
+            return fontErrorName
         }
     }
     
@@ -260,11 +259,10 @@ extension FormView {
     @IBInspectable
     var errorHidden: Bool {
         set {
-            _errorHidden = newValue
-            labelError.isHidden = _errorHidden
+            labelError.isHidden = newValue
         }
         get {
-            return _errorHidden
+            return labelError.isHidden
         }
     }
 }
