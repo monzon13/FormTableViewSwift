@@ -12,6 +12,7 @@ class SearchAddressTableViewCell: UITableViewCell {
     static let ID = "SearchAddressTableViewCell"
     static let estimateheigth: CGFloat = 60
     
+    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelSubtitle: UILabel!
     

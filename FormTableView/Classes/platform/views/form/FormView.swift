@@ -36,10 +36,6 @@ public class FormView: UIView {
         self.layoutSubviews()
     }
     
-    override public var description : String {
-        return "It's a view that simplify the configuration of a field and can be easily configure on the attributes inspector."
-    }
-    
     //MARK: field view properties
     ///To change background color of the view
     @IBInspectable
@@ -444,7 +440,9 @@ extension FormView {
         vc = (count > 0) ? last : root
         let bundle = Bundle(for: self.classForCoder)
         let storyboard = UIStoryboard(name: "Search", bundle: bundle)
-        if let searchVC = storyboard.instantiateViewController(withIdentifier: SearchAddressViewController.ID) as?SearchAddressViewController  {
+        if let searchVC = storyboard.instantiateViewController(withIdentifier: SearchAddressViewController.ID) as? SearchAddressViewController {
+            let connector = SearchAddressViewConnector()
+            connector.connect(view: searchVC)
             vc?.present(searchVC, animated: true, completion: nil)
         }
     }
