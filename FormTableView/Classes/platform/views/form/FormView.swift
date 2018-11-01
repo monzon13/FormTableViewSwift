@@ -17,14 +17,14 @@ public class FormView: UIView {
     var connector: FormViewConnector!
     
     //MARK: IBInspectable parameters
-    var fontSize:CGFloat = 18
-    var fontName:String = "Helvetica"
-    var fontSubtitleSize:CGFloat = 18
-    var fontSubtitleName:String = "Helvetica-Thin"
-    var fontTextleSize:CGFloat = 18
-    var fontTextName:String = "Helvetica-Light"
-    var fonterrorSize:CGFloat = 11
-    var fontErrorName:String = "Helvetica-Light"
+    var fontSize: CGFloat = 18
+    var fontName: String = "Helvetica"
+    var fontSubtitleSize: CGFloat = 18
+    var fontSubtitleName: String = "Helvetica-Thin"
+    var fontTextleSize: CGFloat = 18
+    var fontTextName: String = "Helvetica-Light"
+    var fonterrorSize: CGFloat = 11
+    var fontErrorName: String = "Helvetica-Light"
 
     //MARK: IBOutlets
     var view: UIView!
@@ -35,7 +35,6 @@ public class FormView: UIView {
     @IBOutlet weak var labelError: UILabel!
     
     var field: Field?
-    var vc: UIViewController?
     
     //MARK: - Lifecycle methods
     override init(frame: CGRect) {
@@ -182,7 +181,7 @@ extension FormView: FormViewView {
     }
     
     func updateTable() {
-        vc = (count > 0) ? last : root
+        let vc = (count > 0) ? last : root
         
         if let views = vc?.view.subviews {
             self.searchForTable(views: views)
@@ -207,7 +206,7 @@ extension FormView: FormViewView {
     }
     
     @objc fileprivate func tapFunction(sender:UITapGestureRecognizer) {
-        vc = (count > 0) ? last : root
+        let vc = (count > 0) ? last : root
         let bundle = Bundle(for: self.classForCoder)
         let storyboard = UIStoryboard(name: "Search", bundle: bundle)
         if let searchVC = storyboard.instantiateViewController(withIdentifier: SearchAddressViewController.ID) as? SearchAddressViewController {
