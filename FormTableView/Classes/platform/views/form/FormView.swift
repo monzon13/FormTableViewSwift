@@ -12,6 +12,9 @@ import IQKeyboardManagerSwift
 // - View Class -
 @IBDesignable
 public class FormView: UIView {
+    
+    var presenter: FormViewPresenter!
+    var connector: FormViewConnector!
 
     //MARK: IBOutlets
     var view: UIView!
@@ -34,6 +37,25 @@ public class FormView: UIView {
         super.init(coder: aDecoder)
         xibSetup()
         self.layoutSubviews()
+    }
+    
+    private func loadViewFromNib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "FormView", bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        
+        return view
+    }
+    
+    private func xibSetup() {
+        configureView()
+    }
+    
+    private func configureView() {
+        view = loadViewFromNib()
+        view.frame = bounds
+        view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
+        addSubview(view)
     }
     
     //MARK: field view properties
@@ -278,41 +300,13 @@ extension FormView {
     public func configure(field: Field) {
         self.field = field
         IQKeyboardManager.shared.enable = true
-        
-        clean()
-        configureLabels()
-        configureTextField()
-        configureKeyboard()
-        configureAction()
-    }
-    
-    func updateTexField(value: String) {
-        textField.text = value
+        presenter.viewReady()
     }
 }
 
-//MARK: Private methods
-extension FormView {
-    private func loadViewFromNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "FormView", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        
-        return view
-    }
-    
-    private func xibSetup() {
-        configureView()
-    }
-    
-    private func configureView() {
-        view = loadViewFromNib()
-        view.frame = bounds
-        view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
-        addSubview(view)
-    }
-    
-    private func clean() {
+//MARK: FormViewView
+extension FormView: FormViewView {
+    func clean() {
         self.labelTitle.text = ""
         self.labelSubtitle.text = ""
         self.textField.text = ""
@@ -321,13 +315,13 @@ extension FormView {
         self.labelError.isHidden = true
     }
     
-    private func configureLabels() {
+    func configureLabels() {
         self.labelTitle.text = field?.title
         self.labelSubtitle.text = field?.subtitle
         self.labelError.text = field?.error
     }
     
-    private func configureTextField() {
+    func configureTextField() {
         self.textField.delegate = self
         
         if let value = field?.value as? String {
@@ -336,7 +330,7 @@ extension FormView {
         self.textField.placeholder = field?.placeholder
     }
     
-    private func configureKeyboard() {
+    func configureKeyboard() {
         guard let type = field?.type else {
             return
         }
@@ -361,7 +355,7 @@ extension FormView {
         }
     }
     
-    private func configureAction() {
+    func configureAction() {
         guard let type = field?.type else {
             return
         }
@@ -377,16 +371,14 @@ extension FormView {
         }
     }
     
-    private func configureAddressAction() {
+    func configureAddressAction() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction))
         self.textField.isUserInteractionEnabled = true
         self.textField.addGestureRecognizer(tap)
     }
     
-    private func configureDateAction() {
-        let datePickerView = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePicker.Mode.date
-        datePickerView.maximumDate = Calendar.current.date(byAdding: .year, value: 0, to: Date())
+    func configureDateAction() {
+        let datePickerView = self.datePicker()
         textField.tintColor = UIColor.clear
         textField.inputView = datePickerView
         
@@ -415,7 +407,7 @@ extension FormView {
         datePickerView.addTarget(self, action: #selector(FormView.datePickerDidChange(_:)), for: UIControl.Event.valueChanged)
     }
     
-    private func updateTable() {
+    func updateTable() {
         vc = (count > 0) ? last : root
         
         if let views = vc?.view.subviews {
@@ -423,7 +415,7 @@ extension FormView {
         }
     }
     
-    private func searchForTable(views: [UIView]) {
+    func searchForTable(views: [UIView]) {
         let formViews = views.map({ $0 as? UITableView })
         
         guard let tableView = formViews.first else {
@@ -434,6 +426,10 @@ extension FormView {
             tableView?.beginUpdates()
             tableView?.endUpdates()
         }
+    }
+    
+    func updateTexField(value: String) {
+        textField.text = value
     }
     
     @objc fileprivate func tapFunction(sender:UITapGestureRecognizer) {
@@ -484,5 +480,3 @@ extension FormView: UITextFieldDelegate {
         return true
     }
 }
-
-

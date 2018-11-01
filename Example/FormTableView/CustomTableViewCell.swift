@@ -19,8 +19,8 @@ class CustomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
+        _ = FormViewConnector.init(view: formView)
         
-    }
-
-    
+        
+    }    
 }
