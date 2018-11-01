@@ -169,8 +169,6 @@ extension FormView: FormViewView {
             if let date = dateFormatter.date(from: defaultValue) {
                 textField.text = formatter.string(from: date)
                 datePickerView.date = date
-            }else {
-                textField.text = nil
             }
         }else if let date = field?.value as? Date {
             textField.text = formatter.string(from: date)
