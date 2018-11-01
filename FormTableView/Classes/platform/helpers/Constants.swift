@@ -14,4 +14,5 @@ let REG_EX_WEB = "^[wW]{3}+.[a-zA-Z]{3,}+.[a-z]{2,}"
 //MARK: ViewController
 let count: Int = UIApplication.shared.delegate?.window??.rootViewController?.children.count ?? 0
 let root = UIApplication.shared.delegate?.window??.rootViewController
+let first =  UIApplication.shared.delegate?.window??.rootViewController?.children.first
 let last =  UIApplication.shared.delegate?.window??.rootViewController?.children.last

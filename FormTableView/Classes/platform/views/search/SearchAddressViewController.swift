@@ -126,7 +126,7 @@ extension SearchAddressViewController: SearchAddressView {
     }
     
     private func updateField(value: String) {
-        let vc: UIViewController? = (count > 0) ? last : root
+        let vc: UIViewController? = (count > 0) ? first : root
         
         if let views = vc?.view.subviews {
             presenter.searchForTable(value: value, views: views)
